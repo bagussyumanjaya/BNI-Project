@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNI Legacy Book: A Proposal Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #003459;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-container {
+            position: relative;
+            padding: 2rem 0;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: #00A8E8;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 1rem 2rem;
+            box-sizing: border-box;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            width: 20px;
+            height: 20px;
+            background-color: #F8F9FA;
+            border: 4px solid #00A8E8;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+            transform: translateY(-50%);
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+            transform: translateY(-50%);
+        }
+        .timeline-content {
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003459] mb-2">Turning Point: How BNI 1946 Changed Banking in Asia</h1>
+            <p class="text-xl md:text-2xl font-bold text-[#007EA7]">A Proposal to Chronicle the BNI Legacy</p>
+        </header>
+
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <p class="text-8xl font-black text-[#00A8E8]">80</p>
+                    <p class="text-xl font-bold mt-2">Years of History</p>
+                    <p class="mt-2">Commemorating BNI's 80th anniversary on July 5, 2026, this book captures a pivotal chapter in its long and storied history.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <p class="text-8xl font-black text-[#00A8E8]">40</p>
+                    <p class="text-xl font-bold mt-2">Years of Transformation</p>
+                    <p class="mt-2">Marking four decades since the historic 1986 restructuring that redefined BNI's future and set a new course for banking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003459]">A Book for Preserving BNI's Legacy</h2>
+            <p class="max-w-3xl mx-auto text-center mb-10">Creating this legacy book is essential to encapsulate a defining period in BNI's history, providing invaluable insights and inspiration for future generations. It serves multiple critical purposes for the institution and its stakeholders.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center p-4 border rounded-md border-[#00A8E8] bg-[#EBF8FF]">
+                    <span class="text-4xl mb-2">🏛️</span>
+                    <h3 class="text-lg font-bold text-[#007EA7]">Historical Documentation</h3>
+                    <p class="text-sm">Preserve the critical events and decisions that shaped BNI's journey.</p>
+                </div>
+                <div class="flex flex-col items-center p-4 border rounded-md border-[#00A8E8] bg-[#EBF8FF]">
+                    <span class="text-4xl mb-2">🌟</span>
+                    <h3 class="text-lg font-bold text-[#007EA7]">Inspire Future Leaders</h3>
+                    <p class="text-sm">Share lessons learned and triumphs to motivate employees and future leaders.</p>
+                </div>
+                <div class="flex flex-col items-center p-4 border rounded-md border-[#00A8E8] bg-[#EBF8FF]">
+                    <span class="text-4xl mb-2">📈</span>
+                    <h3 class="text-lg font-bold text-[#007EA7]">Showcase Resilience</h3>
+                    <p class="text-sm">Highlight BNI's ability to adapt and thrive through significant challenges.</p>
+                </div>
+                <div class="flex flex-col items-center p-4 border rounded-md border-[#00A8E8] bg-[#EBF8FF]">
+                    <span class="text-4xl mb-2">🏅</span>
+                    <h3 class="text-lg font-bold text-[#007EA7]">Enhance Reputation</h3>
+                    <p class="text-sm">Strengthen BNI's image as a pioneering and influential financial institution.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#003459]">A Story of Transformation</h2>
+            <p class="max-w-3xl mx-auto text-center mb-10">This book offers a firsthand account of the transformative years, beginning with reform plans drafted in 1983. It's a narrative that transcends corporate history, delving into the human element of institutional change.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3">💡</span>
+                    <h3 class="text-xl font-bold text-[#007EA7]">Pivotal Changes</h3>
+                    <p>Detailing the significant strategic and operational shifts implemented during this groundbreaking era.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3">📖</span>
+                    <h3 class="text-xl font-bold text-[#007EA7]">Inspiring Stories</h3>
+                    <p>Sharing the unique and compelling narratives from behind the scenes of BNI's corporate evolution.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-5xl mb-3">👥</span>
+                    <h3 class="text-xl font-bold text-[#007EA7]">The People Behind It</h3>
+                    <p>Celebrating the lives and contributions of the individuals and heroes who propelled BNI to success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-16 relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#EBF8FF] to-[#DBEEFF] opacity-70 rounded-lg"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#003459]">BNI: A Foundation for Asian Banking Reform</h2>
+                <span class="block text-6xl text-center mb-8 animate-pulse">🌍</span>
+                <p class="max-w-3xl mx-auto text-center mb-10">BNI's transformative program laid the groundwork for banking reforms across Asia, earning international recognition for its pioneering initiatives.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-4 border-l-4 border-[#00A8E8] bg-white rounded-md shadow-sm">
+                        <h3 class="text-xl font-bold text-[#007EA7] mb-2">Regional Impact</h3>
+                        <ul class="list-disc list-inside text-left space-y-1">
+                            <li>BNI's program served as the blueprint for banking reform in Thailand.</li>
+                            <li>Similar initiatives in China were inspired by BNI's original efforts.</li>
+                            <li>In Singapore, banking advancements also stemmed from BNI's foundational program.</li>
+                            <li>Ultimately, BNI established itself as a cornerstone for banking transformation throughout Asia.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border-l-4 border-[#F9F871] bg-white rounded-md shadow-sm">
+                        <h3 class="text-xl font-bold text-[#007EA7] mb-2">International Recognition</h3>
+                        <p class="text-left">BNI's program was a benchmark for success, recognized by key international organizations. Back then, BNI’s program was even recognized by the World Bank.</p>
+                        <p class="text-left mt-2 font-semibold">Countries influenced include: Sri Lanka, China, Singapore, Thailand, Nepal, the Philippines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center mb-2 text-[#003459]">Reaching the Right Audience</h2>
+                    <p class="text-center mb-6">This book is designed to engage a diverse audience, from internal teams to key external stakeholders and the wider financial community, ensuring the legacy of BNI's transformation is widely understood and appreciated.</p>
+                    <div class="chart-container">
+                        <canvas id="audienceChart"></canvas>
+                    </div>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                    <h2 class="text-3xl font-bold text-center mb-6 text-[#003459]">Two Distinct Formats</h2>
+                    <p class="text-center mb-8">To maximize appeal and cater to different reading preferences, the book is proposed in two high-quality formats, each with its own unique feel and presentation style.</p>
+                    <div class="space-y-6">
+                        <div class="p-4 border-l-4 border-[#00A8E8] bg-[#EBF8FF]">
+                            <h3 class="text-xl font-bold text-[#007EA7]">Classic Corporate Book</h3>
+                            <p class="mt-1">A premium, landscape coffee table book perfect for corporate settings and as a commemorative gift. Specs: 128 pages, 27x21 cm, Hardcover.</p>
+                        </div>
+                        <div class="p-4 border-l-4 border-[#F9F871] bg-[#FFFFF0]">
+                             <h3 class="text-xl font-bold text-[#007EA7]">Illustrated Novel-Style</h3>
+                            <p class="mt-1">A more personal, portrait-oriented book that tells the story in an engaging, narrative-driven format. Specs: 128 pages, 13.5x20 cm, Hardcover.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#003459]">The Path to Launch</h2>
+            <p class="max-w-3xl mx-auto text-center mb-10">The project is strategically timed to culminate in a launch coinciding with BNI's 80th anniversary. This meticulously planned timeline ensures a high-quality publication delivered on schedule.</p>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-[#007EA7]">Q2 2025</h3>
+                        <p>Brainstorming & Team Assembly. Agreement Signing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-[#007EA7]">Q3 2025</h3>
+                        <p>Comprehensive Data Collection & Start of Writing Process.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-[#007EA7]">Q4 2025</h3>
+                        <p>Writing Completion. Illustration, Layout & Editing Begin.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-[#007EA7]">Q1 2026</h3>
+                        <p>Editing & Layout Continues. Finalization Process Starts.</p>
+                    </div>
+                </div>
+                 <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="font-bold text-[#007EA7]">Q2 2026</h3>
+                        <p>Printing and Distribution Process.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content bg-[#003459] text-white">
+                        <h3 class="font-bold text-[#F9F871]">July 2026</h3>
+                        <p>Book Launch: "Awakening The Giant, The Legacy of BNI".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center pt-8 border-t border-gray-300">
+            <p class="font-bold">A proposal to preserve and celebrate a pivotal moment in Indonesian banking history.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        const audienceCtx = document.getElementById('audienceChart').getContext('2d');
+        const audienceLabels = [
+            'BNI Employees',
+            'External Stakeholders',
+            'Wider Banking Community'
+        ];
+
+        const audienceChart = new Chart(audienceCtx, {
+            type: 'doughnut',
+            data: {
+                labels: audienceLabels,
+                datasets: [{
+                    label: 'Target Audience',
+                    data: [40, 45, 15],
+                    backgroundColor: [
+                        '#00A8E8',
+                        '#007EA7',
+                        '#003459'
+                    ],
+                    borderColor: '#F8F9FA',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 14,
+                                family: 'Inter'
+                            },
+                             boxWidth: 20,
+                             padding: 20,
+                             color: '#003459'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+    </script>
+</body>
+</html>
